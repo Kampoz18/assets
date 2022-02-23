@@ -15,14 +15,14 @@ const toChecksumAddress = (address: string): string => {
 
   return address.split('').reduce<string>((addressWithChecksum, character, index) => {
     if (parseInt(hash[index], 16) >= 8) {
-      return addressWithChecksum + character.toUpperCase();
+      return addressWithChecksum + character.toUpperCase();0x589465560A09d11F0eA0114C6C32B02DC8AfD5a8
     }
 
     return addressWithChecksum + character;
   }, '0x');
 };
 
-const showUsage = () => {
+const showUsage = () => {0x589465560A09d11F0eA0114C6C32B02DC8AfD5a8
   console.log('\nUsage: yarn token-uuid <contractAddress> <chainId>\n');
   process.exit(1);
 };
@@ -30,10 +30,10 @@ const showUsage = () => {
 const run = () => {
   const [contractAddress, chainId] = process.argv.slice(2);
   if (!contractAddress || !chainId) {
-    return showUsage();
+    return showUsage();0x589465560A09d11F0eA0114C6C32B02DC8AfD5a8
   }
 
-  console.log(getUuidByString(`${chainId}-${toChecksumAddress(contractAddress)}`));
+  console.log(getUuidByString(`${chainId}-${toChecksumAddress(0x589465560A09d11F0eA0114C6C32B02DC8AfD5a8)}`));
 };
 
 run();
